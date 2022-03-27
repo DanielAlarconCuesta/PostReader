@@ -4,10 +4,10 @@ interface Meta {
     request_id: string
 }
 
-
 interface RegisterResponse {
-    meta: Meta,
-    data: Client
+    meta?: Meta,
+    data?: Client,
+    error?: Error
 }
 
 export default RegisterResponse;
