@@ -1,0 +1,13 @@
+.user-list-container {
+    display: flex;
+    height: 40rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.user-list-users {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+}
