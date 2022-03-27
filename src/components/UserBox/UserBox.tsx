@@ -34,7 +34,7 @@ function UserBox(userBoxProps: UserBoxProps) {
         >
             <div className="user-name">
                 <span>
-                    {userBoxProps.user.name}
+                    {userBoxProps?.user?.name || ""}
                 </span>
             </div>
 

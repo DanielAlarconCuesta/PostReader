@@ -30,8 +30,6 @@ function UserBoxList(userBoxListProps: UserBoxListProps) {
     }, [userBoxListProps.users, nameFilter])
 
     useEffect(() => {
-
-        console.log("users changed", users);
         
         if (!users || !users.length) {
             dispatch({

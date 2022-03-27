@@ -99,12 +99,6 @@ function PostView() {
 
 	}, []);
 
-	useEffect(() => {
-
-		console.log("users changed", users);
-
-	}, [users]);
-
 	const handlerLoadMoreClick = function() {
 		loadPosts();
 	}

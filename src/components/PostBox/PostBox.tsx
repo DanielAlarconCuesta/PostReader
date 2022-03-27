@@ -32,14 +32,14 @@ function PostBox(postBoxProps: PostBoxProps) {
         <div className="post-box-container">
 
             <div className="post-box-date">
-                {formatDate(postBoxProps.post.created_time)}
+                {formatDate(postBoxProps?.post?.created_time)}
             </div>
 
             <hr className="post-box-hr" />
 
             <div className="post-box-message">
                 <p>
-                    {postBoxProps.post.message}
+                    {postBoxProps?.post?.message || ""}
                 </p>
                 
             </div>
