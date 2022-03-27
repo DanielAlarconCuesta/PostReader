@@ -1,0 +1,35 @@
+.posts-view-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.posts-view-content {
+    display: flex;
+    height: 40rem;
+    gap: 1rem;
+}
+
+.posts-view-users {
+    flex: 2;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.posts-view-posts {
+    flex: 8;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e9c4ff;
+}

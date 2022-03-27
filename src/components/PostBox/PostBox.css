@@ -1,0 +1,33 @@
+.post-box-container {
+    display: flex;
+    flex-direction: column;
+    background-color:#e9c4ff;
+    width: 100%;
+    min-height: 11rem;
+    height: auto;
+    border-radius: 10px;
+}
+
+.post-box-date {
+    flex: 2;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.post-box-hr {
+    width: 96%;
+    margin-left: 10px;
+}
+
+.post-box-message {
+    flex: 8;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.post-box-message > p {
+    text-align: start;
+}
