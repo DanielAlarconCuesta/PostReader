@@ -24,7 +24,7 @@ const handleResponse = (response: Response): Promise<PostResponse> => {
         })
 }
 
-const handleError = (error?: any) => {
+export const handleError = (error?: any) => {
 
     let errorProcessed: Error;
 
@@ -41,7 +41,7 @@ const handleError = (error?: any) => {
     return errorProcessed;
 }
 
-function _checkDataErrors(postRequest: PostRequest): Error | null {
+export function _checkDataErrors(postRequest: PostRequest): Error | null {
 
     let error = null;
 
@@ -61,21 +61,21 @@ function _checkDataErrors(postRequest: PostRequest): Error | null {
     return error;
 }
 
-function _prepareParams(postRequest: PostRequest): string {
+export function _prepareParams(postRequest: PostRequest): string {
 
     let url = new URL(ENDPOINT),
         endpoint = url.toString(),
         params = new URLSearchParams(url.search);
 
-    if (postRequest.sl_token) {
+    if (postRequest?.sl_token) {
         params.append("sl_token", postRequest.sl_token);
     }
 
-    if (postRequest.page) {
+    if (postRequest?.page) {
         params.append("page", postRequest.page.toString());
     }
 
-    if (params.toString()) {
+    if (params?.toString()) {
         endpoint += `?${params.toString()}`;
     }
 
@@ -117,7 +117,7 @@ export async function doRequest(postRequest: PostRequest): Promise<PostResponse>
     return postResponse;
 }
 
-function sortUsersAlphabetically(users: User[]): User[] {
+export function sortUsersAlphabetically(users: User[]): User[] {
 
    if (!users || !Array.isArray(users)) {
       return [];

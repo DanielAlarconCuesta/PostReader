@@ -8,6 +8,8 @@ import store from '../../store';
 
 describe('PostsView component', () => {
 
+	jest.spyOn(window, "alert").mockImplementation(() => {});
+
 	test('renders', () => {
 		render(
 			<Provider store={store}>
