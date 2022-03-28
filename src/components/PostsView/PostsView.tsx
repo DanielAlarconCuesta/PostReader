@@ -109,8 +109,6 @@ function PostView() {
 			page: nextPage
 		}
 
-		let previousLengthUsers: number = users?.length | 0;
-
 		PostService.getUsers(postRequest, users)
 			.then((userResponse: UserResponse) => {
 
@@ -126,6 +124,9 @@ function PostView() {
 						dispatch({
 							type: SessionActionType.REMOVE_SESSION
 						});
+
+					} else {
+						alert(userResponse?.error?.message || "Unknown Server Error");
 					}
 				
 				} else if (userResponse.users && Array.isArray(userResponse.users)) {
